@@ -11,6 +11,7 @@ const Index = ({ data }) => (
 export async function getServerSideProps() {
   const res = await fetch(`http://localhost:1337/menus`);
   const data = await res.json();
+  console.log(data);
 
   if (!data) {
     return {
