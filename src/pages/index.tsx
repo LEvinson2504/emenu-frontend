@@ -1,9 +1,8 @@
 import { Container } from "../components/Container";
 import Menus from "../components/Menus";
 
-const Index = ({ data }) => (
+const Index = ({ data }: any) => (
   <Container height="100vh">
-    Hello world
     <Menus data={data} />
   </Container>
 );

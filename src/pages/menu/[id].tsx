@@ -5,11 +5,14 @@ import MenuItems from "../../components/MenuItems.tsx";
 const Menu = ({ data }: any) => {
   // const router = useRouter();
   // const { id } = router.query;
+  console.log(data);
 
   return (
     <Container>
       {data &&
-        data.map((menuitem: any) => <MenuItems data={menuitem}></MenuItems>)}
+        data.menu_items.map((menuitem: any) => (
+          <MenuItems id={menuitem.id} data={menuitem}></MenuItems>
+        ))}
     </Container>
   );
 };
