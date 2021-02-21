@@ -1,4 +1,4 @@
-import { Text, Flex, Button, useColorModeValue } from "@chakra-ui/react";
+import { Text, Flex, Button, useColorModeValue, Stack } from "@chakra-ui/react";
 import { Container } from "./Container";
 
 const Menus = ({ data }: any) => {

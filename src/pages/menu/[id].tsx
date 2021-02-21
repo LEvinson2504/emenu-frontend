@@ -1,6 +1,6 @@
 // import { useRouter } from "next/router";
 import { Container } from "../../components/Container";
-import MenuItems from "../../components/MenuItems.tsx";
+import MenuItems from "../../components/MenuItems";
 
 const Menu = ({ data }: any) => {
   // const router = useRouter();
