@@ -33,7 +33,7 @@ export async function getServerSideProps() {
   const res = await fetch(`http://localhost:1337/restaurants`);
   const data = await res.json();
 
-  console.log(data);
+  // console.log(data);
 
   if (!data) {
     return {
