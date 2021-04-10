@@ -1,4 +1,4 @@
-import { Text, Flex, Button, useColorModeValue, Stack } from "@chakra-ui/react";
+import { Text, Flex, Button, useColorModeValue } from "@chakra-ui/react";
 import { Container } from "./Container";
 
 const Menus = ({ data }: any) => {
@@ -20,7 +20,8 @@ const Menus = ({ data }: any) => {
               <Flex
                 h="200px"
                 w="300px"
-                margin="10px"
+                my="20px"
+                mx={["40px", "30px", "20px"]}
                 key={menu.id}
                 bgColor={bg}
                 borderRadius="5%"
