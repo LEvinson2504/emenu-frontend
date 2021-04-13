@@ -1,11 +1,28 @@
 import { Container } from "../components/Container";
 import Menus from "../components/Menus";
 
-const Index = ({ data }: any) => (
-  <Container height="100vh">
-    <Menus data={data} />
-  </Container>
-);
+import { signIn, signOut, useSession } from "next-auth/client";
+
+export default function Index({ data }: any) {
+  const [session, loading] = useSession();
+  return (
+    <Container height="100vh">
+      {!session && (
+        <>
+          Not signed in <br />
+          <button onClick={() => signIn()}>Sign in</button>
+        </>
+      )}
+      {session && (
+        <>
+          Signed in as {session.user.email} <br />
+          <button onClick={() => signOut()}>Sign out</button>
+          <Menus data={data} />
+        </>
+      )}
+    </Container>
+  );
+}
 
 export async function getServerSideProps() {
   const res = await fetch(`http://localhost:1337/menus`);
@@ -24,5 +41,3 @@ export async function getServerSideProps() {
     },
   };
 }
-
-export default Index;
