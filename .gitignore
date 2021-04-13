@@ -46,3 +46,4 @@ TODO.md
 /workspace.xml
 # Editor-based HTTP Client requests
 /httpRequests/
+yarn.lock

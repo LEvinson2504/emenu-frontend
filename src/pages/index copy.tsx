@@ -5,7 +5,6 @@ import {
   List,
   ListIcon,
   ListItem,
-  Flex,
 } from "@chakra-ui/react";
 import { CheckCircleIcon, LinkIcon } from "@chakra-ui/icons";
 
