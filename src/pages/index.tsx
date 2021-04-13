@@ -4,7 +4,7 @@ import Menus from "../components/Menus";
 import { signIn, signOut, useSession } from "next-auth/client";
 
 export default function Index({ data }: any) {
-  const [session, loading] = useSession();
+  const [session] = useSession();
   return (
     <Container height="100vh">
       {!session && (
